@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 *{
-  background-color: rgb(0, 0, 0);
   font-family: 'Bebas Neue', sans-serif;
+}
+:root{
+  background-color: black;
 }

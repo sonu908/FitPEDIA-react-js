@@ -1,7 +1,7 @@
 import { Route , Routes } from 'react-router-dom'
 import './App.css'
 import Home from './Components/Home'
-import CardsExer from './Components/CardsExer'
+import ViewCard from './Components/ViewCard'
 
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <>
 <Routes>
   <Route path='/' element={<Home/>} />
-  <Route path='exercise/:id' element={<CardsExer/>} />
+  <Route path='exercise/:id' element={<ViewCard/>} />
 </Routes>
 
 
