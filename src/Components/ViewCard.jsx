@@ -108,7 +108,7 @@ function ViewCard() {
             <Foods recipie={recipie} />
           ) : (
             <div>
-              <h1>Some error occured</h1>
+              
             </div>
           )}{" "}
         </div>

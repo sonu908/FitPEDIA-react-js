@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 // import Ingredients from "./Ingredients";
-import last from'../assets/last.jpg'
+import last from "../assets/last.jpg";
 import Footer from "./Footer";
 
 function Foods({ recipie }) {
@@ -9,7 +9,7 @@ function Foods({ recipie }) {
   console.log(recipie);
   return (
     <div>
-        <img src={last} alt="" />
+      <img src={last} alt="" className="p-4 " />
       <p className="border-x border-red-700 text-4xl p-5">
         {" "}
         Proper{" "}
@@ -25,7 +25,6 @@ function Foods({ recipie }) {
           <h1 className="text-4xl text-red-700">{recipie.name}</h1>
           <p>{recipie.description}</p>
           <div className="w-3/4">
-           
             <h1 className="text-3xl text-red-700 mt-6">Prepration</h1>
             {recipie.steps.map((step, index) => (
               <h3 className="mt-3" key={index}>
@@ -35,22 +34,20 @@ function Foods({ recipie }) {
             ))}
           </div>
         </div>
-         <div className="w-2/4">
-           {recipie.ingredients.map((ingredient, index) => (
-              <button
-                key={index}
-                className="min-h-[60px] max-h-[60px] overflow-hidden p-2 m-2 gap-3 w-[100px] text-white rounded-xl bg-gradient-to-r border-red-700 border bg-transparent"
-              >
-                {ingredient.name}
-              </button>
-              
-            ))}
+        <div className="w-2/4">
+          <p className="text-3xl text-red-700">ingredients</p>
+          {recipie.ingredients.map((ingredient, index) => (
+            <button
+              key={index}
+              className="min-h-[60px] max-h-[60px] overflow-hidden p-2 m-2 gap-3 w-[100px] text-white rounded-xl bg-gradient-to-r border-red-700 border bg-transparent hover:bg-red-700"
+            >
+              {ingredient.name}
+            </button>
+          ))}
           <img src={recipie.image} className="rounded-2xl" alt="" />
-
-        </div> 
+        </div>
       </div>
-      <Footer/>
-
+      <Footer />
     </div>
   );
 }

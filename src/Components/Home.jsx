@@ -127,12 +127,12 @@ function Home() {
           </div>
         </div>
       </section>
-      <div className="grid grid-cols-3 ">
+      <div className="grid grid-cols-3 animate-fade-up animate-once animate-ease-in-out">
         {CurrentExercise.map((result, index) => (
           <CardsExer key={index} result={result} />
         ))}
       </div>
-      <Stack spacing={2}>
+      <Stack spacing={2} alignItems="center" className="flex">
         {searchResults.length > 9 && (
           <Pagination
             color="primary"

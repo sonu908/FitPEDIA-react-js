@@ -36,7 +36,7 @@ function CountdownTimer() {
 
   return (
     <div className="text-center border-red-700 border rounded-2xl p-6 w-1/4 cursor-grab">
-     
+     <p className=" tracking-widest">Lets do it !</p>
       <div className="gap-3 text-center flex m-auto">
         <AiFillPlayCircle className="text-8xl" onClick={handleStart} />
         <div>
